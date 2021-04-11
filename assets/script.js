@@ -11,3 +11,18 @@ let hourText = [
     "4:00pm",
     "5:00pm"
 ];
+
+const blockSetup = () => {
+    for (let i = 0; i < hourText.length; i++) {
+        let timeBlockRow = $("<div>");
+        let hourCol = $("<div>");
+        let textCol = $("<div>");
+        let saveCol = $("<div>");
+        let hourBlock = $("<div>");
+        let p = $("<p>");
+        let textBlock = $("<textarea>");
+        let saveBtn = $("<button>");
+        let hourValue = ["9", "10", "11", "12", "13", "14", "15", "16", "17"];
+        
+    };
+};
