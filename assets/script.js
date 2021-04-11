@@ -12,7 +12,7 @@ let hourText = [
     "5:00pm"
 ];
 
-const blockSetup = () => {
+function blockSetup() {
     for (let i = 0; i < hourText.length; i++) {
         let timeBlockRow = $("<div>");
         let hourCol = $("<div>");
@@ -64,7 +64,7 @@ const blockSetup = () => {
 
 blockSetup();
 
-const setStorage = index => {
+function setStorage(index) {
     $("#button" + index).on("click", function() {
         localStorage.setItem($("#hourBlock" + index).text(), $("#textBlock" + index).val());
     })
