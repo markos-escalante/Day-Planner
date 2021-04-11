@@ -16,7 +16,7 @@ h1 {
 }
 
 textarea {
-  background-color: #fff;
+  background-color: beige;
   border: none;
   resize: none;
   color: #000000;
@@ -33,10 +33,10 @@ button {
 
 .jumbotron {
   text-align: center;
-  background-color: maroon;
+  background-color: salmon;
   color: black;
   border-radius: 0;
-  border-bottom: 20px double #243873;
+  border-bottom: 20px white;
 }
 
 .description {
@@ -46,4 +46,52 @@ button {
 .time-block {
   text-align: center;
   background-color: transparent;
+}
+
+.row {
+  white-space: pre-wrap;
+  border-radius: 15px;
+  background-color: rgb(250, 249, 244);
+  margin: 5px;
+}
+
+.hour {
+  background-color: transparent;
+  color: #000000;
+}
+
+.past {
+  background-color: darkgray;
+  color: #243873;
+}
+
+.present {
+  background-color: lightsteelblue;
+  color: #243873;
+}
+.future {
+  background-color: lightgreen;
+  color: #243873;
+}
+
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: lightgray;
+  color: white;
+}
+
+.saveBtn i:hover {
+  font-size: 18px;
+  color: lightgray;
+  transition: all 0.2s ease-in-out;
+}
+
+#currentDay {
+  font-weight: bold;
+}
+
+#tagline {
+  font-style: italic;
 }
