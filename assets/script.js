@@ -63,3 +63,23 @@ const blockSetup = () => {
 };
 
 blockSetup();
+
+const setStorage = index => {
+    $("#button" + index).on("click", function() {
+        localStorage.setItem($("#hourBlock" + index).text(), $("#textBlock" + index).val());
+    })
+};
+
+let currentTime = moment().hour();
+$("textarea").each(function(index) {
+    let textHour = $("#textBlock" + index).attr("value");
+    let textValue = parseInt(textHour);
+
+    if (textValue === currentTime) {
+        $(this).addClass("text col present");
+    } else if (textValue < currentTime) {
+        $(this).addClass("text col past");
+    } else {
+        $(this).addClass("text col future");
+    };
+});
