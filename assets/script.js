@@ -28,6 +28,7 @@ const blockSetup = () => {
             class: "time-block d-flex bd-highlight p-3 row",
             id: "timeblock" + i
         });
+
         hourCol.attr("class", "p-2 bd-highlight col-md-3 hour");
         textCol.attr("class", "p-2 bd-highlight col-md-7");
         saveCol.attr("class", "p-2 bd-highlight col-md-2");
@@ -35,10 +36,30 @@ const blockSetup = () => {
             class: "p-2 bd-highlight mt-2",
             id: "hourBlock" + i
         });
+
         textBlock.attr({
             class: "text col",
             id: "textBlock" + i,
             value: hourValue[i]
         });
+        
+        textBlock.text(localStorage.getItem(hourText[i]));
+
+        saveBtn.html('<i class="far fa-calendar-plus"></i>');
+        saveBtn.attr({
+            class: "p-2 bd-highlight saveBtn mb-2 mt-1 p-3",
+            id: "button" + i
+        });
+
+        $(".container").append(timeBlockRow);
+        p.text(hourText[i]);
+        hourBlock.append(p);
+        timeBlockRow.append(hourCol, textCol, saveCol);
+        hourCol.append(hourBlock);
+        textCol.append(textBlock);
+        saveCol.append(saveBtn);
+        setStorage(i);
     };
 };
+
+blockSetup();
