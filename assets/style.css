@@ -1,0 +1,16 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  background-color: lightgray;
+}
+
+p {
+  color: black;
+  font-size: 18pt;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Josefin Sans", sans-serif;
+}
